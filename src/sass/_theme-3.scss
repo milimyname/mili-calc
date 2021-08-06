@@ -1,0 +1,48 @@
+// Theme 2
+
+.container-3 {
+  background-color: $color-main-background-violet;
+  color: $color-light-yellow;
+}
+
+.header-3 {
+  &__heading-2,
+  &__toggle-box {
+    color: $color-light-yellow;
+  }
+  &__btn-background {
+    background-color: $color-toggle-background-violet;
+  }
+
+  &__btn {
+    background-color: $color-key-background-cyan-3;
+  }
+}
+
+.screen-3 {
+  &__input {
+    background-color: $color-toggle-background-violet;
+    color: $color-light-yellow;
+  }
+}
+
+.keypad-3 {
+  background-color: $color-toggle-background-violet;
+
+  &__key {
+    background-color: $color-key-background-magenta;
+    border-bottom: 3px solid $color-key-shadow-magenta;
+
+    &-del,
+    &-reset {
+      background-color: $color-key-background-violet;
+      border-bottom: 3px solid $color-key-shadow-violet;
+      color: $color-white;
+    }
+    &-equal {
+      background-color: $color-key-background-cyan-3;
+      border-bottom: 3px solid $color-key-shadow-cyan-3;
+      color: $color-blue;
+    }
+  }
+}

@@ -1,0 +1,101 @@
+// Layout
+$bp-desktop: 90em; // 1440px
+$bp-mobile: 26.25em; // 420px
+
+// Colors
+
+// Theme 1
+// Backgrounds
+$color-main-background-blue: hsl(222, 26%, 31%);
+$color-toggle-background-blue: hsl(223, 31%, 20%);
+$color-screen-background-blue: hsl(224, 36%, 15%);
+
+// Keys
+$color-key-background-blue: hsl(225, 21%, 49%);
+$color-key-shadow-blue: hsl(224, 28%, 35%);
+$color-key-background-red: hsl(6, 63%, 50%);
+$color-key-shadow-red: hsl(6, 70%, 34%);
+$color-key-background-grayish: hsl(30, 25%, 89%);
+$color-key-shadow-grayish: hsl(28, 16%, 65%);
+
+// Text
+
+$color-dark-blue: hsl(221, 14%, 31%);
+$color-white: white;
+
+// Theme 2
+// Backgrounds
+$color-main-background-gray: hsl(0, 0%, 90%);
+$color-toggle-background-gray: hsl(0, 5%, 81%);
+$color-screen-background-gray: hsl(0, 0%, 93%);
+
+// Keys
+$color-key-background-cyan: hsl(185, 42%, 37%);
+$color-key-shadow-cyan: hsl(185, 58%, 25%);
+$color-key-background-orange: hsl(25, 98%, 40%);
+$color-key-shadow-orange: hsl(25, 99%, 27%);
+$color-key-background-yellow: hsl(45, 7%, 89%);
+$color-key-shadow-yellow: hsl(35, 11%, 61%);
+
+// Text
+$color-dark-yellow: hsl(60, 10%, 19%);
+
+// Theme 3
+// Backgrounds
+$color-main-background-violet: hsl(268, 75%, 9%);
+$color-toggle-background-violet: hsl(268, 71%, 12%);
+
+// Keys
+$color-key-background-violet: hsl(281, 89%, 26%);
+$color-key-shadow-violet: hsl(285, 91%, 52%);
+$color-key-background-cyan-3: hsl(176, 100%, 44%);
+$color-key-shadow-cyan-3: hsl(177, 92%, 70%);
+$color-key-background-magenta: hsl(268, 47%, 21%);
+$color-key-shadow-magenta: hsl(290, 70%, 36%);
+
+// Text
+$color-light-yellow: hsl(52, 100%, 62%);
+$color-blue: hsl(198, 20%, 13%);
+$color-light-blue: hsl(198, 20%, 13%);
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; //10px
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Spartan', sans-serif;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 40vw 1fr;
+  transition: all 0.2s;
+
+  @media only screen and (max-width: $bp-mobile) {
+    grid-template-columns: 1fr 90vw 1fr;
+  }
+}
+
+.calc {
+  grid-column: 2 / 3;
+  margin: 10vh 0;
+
+  @media only screen and (max-width: $bp-mobile) {
+    margin: 5vh 0;
+  }
+
+  display: grid;
+  grid-template-rows: 5rem min-content 3fr;
+  grid-row-gap: 1.5rem;
+}

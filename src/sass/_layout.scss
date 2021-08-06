@@ -1,0 +1,131 @@
+// Header Style
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__heading-2 {
+    font-size: 3rem;
+    letter-spacing: -0.3rem;
+    align-self: flex-end;
+    color: $color-white;
+  }
+  &__toggle-box {
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+  }
+  &__heading-3 {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    margin-right: 2rem;
+    align-self: flex-end;
+  }
+  &__toggle {
+    display: grid;
+    grid-template-columns: repeat(5, min-content);
+    grid-template-rows: min-content 1.5rem;
+    grid-column-gap: 1rem;
+    grid-row-gap: 0.5rem;
+  }
+  &__heading-4 {
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    backface-visibility: hidden;
+    &--1 {
+      grid-column: 2 /3;
+    }
+
+    &:hover {
+      transform: scale(1.25);
+    }
+  }
+  &__btn-background {
+    grid-column: 1 / -1;
+    background-color: $color-toggle-background-blue;
+    border-radius: 10rem;
+    display: flex;
+    align-items: center;
+    padding: 0.9rem;
+  }
+  &__btn {
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    transition: all 0.2s;
+    transform: translateX(-0.3rem);
+    background-color: $color-key-background-red;
+  }
+}
+
+// Section Screen
+
+.screen {
+  &__input {
+    border: none;
+    border-radius: 7px;
+    padding: 2rem;
+    width: 100%;
+    font-size: 4rem;
+    font-family: inherit;
+    text-align: right;
+    background-color: $color-screen-background-blue;
+    color: $color-white;
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+::selection {
+  background-color: lightblue;
+}
+
+// Section Keypad
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+  padding: 2rem;
+  font-size: 3rem;
+  text-transform: uppercase;
+  border-radius: 7px;
+  background-color: $color-toggle-background-blue;
+  &__key {
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    background-color: $color-white;
+    border-bottom: 3px solid $color-key-shadow-grayish;
+
+    &-del,
+    &-minus {
+      font-size: 2rem;
+      background-color: $color-key-background-blue;
+      border-bottom: 3px solid $color-key-shadow-blue;
+      color: $color-white;
+    }
+
+    &-reset {
+      grid-column: 1 / span 2;
+      font-size: 1.4rem;
+    }
+
+    &-equal {
+      grid-column: 3 / span 2;
+      font-size: 1.4rem;
+      background-color: $color-key-background-red;
+      border-bottom: 3px solid $color-key-shadow-red;
+      color: $color-white;
+    }
+
+    // Animation
+    &:active {
+      border-bottom: 3px solid transparent;
+    }
+  }
+}

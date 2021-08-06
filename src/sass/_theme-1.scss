@@ -1,0 +1,48 @@
+// Theme 1
+
+.container-1 {
+  background-color: $color-main-background-blue;
+  color: $color-dark-blue;
+}
+
+.header-1 {
+  &__heading-2,
+  &__toggle-box {
+    color: $color-white;
+  }
+  &__btn-background {
+    background-color: $color-toggle-background-blue;
+  }
+
+  &__btn {
+    background-color: $color-key-background-red;
+  }
+}
+
+.screen-1 {
+  &__input {
+    background-color: $color-screen-background-blue;
+    color: $color-white;
+  }
+}
+
+.keypad-1 {
+  background-color: $color-toggle-background-blue;
+
+  &__key {
+    background-color: $color-white;
+    border-bottom: 3px solid $color-key-shadow-grayish;
+
+    &-del,
+    &-reset {
+      background-color: $color-key-background-blue;
+      border-bottom: 3px solid $color-key-shadow-blue;
+      color: $color-white;
+    }
+    &-equal {
+      background-color: $color-key-background-red;
+      border-bottom: 3px solid $color-key-shadow-red;
+      color: $color-white;
+    }
+  }
+}

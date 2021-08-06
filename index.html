@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/sass/main.scss" />
+    <script defer src="src/js/main.js"></script>
+    <title>Frontend Mentor | Calculator app</title>
+  </head>
+
+  <body class="container container-1">
+    <div class="calc">
+      <header class="header header-1">
+        <h2 class="header__heading-2 header-1__heading-2">calc</h2>
+        <div class="header__toggle-box header-1__toggle-box">
+          <h3 class="header__heading-3">Theme</h3>
+          <div class="header__toggle">
+            <h4 class="header__heading-4 header__heading-4--1">1</h4>
+            <h4 class="header__heading-4 header__heading-4--2">2</h4>
+            <h4 class="header__heading-4 header__heading-4--3">3</h4>
+            <div class="header__btn-background">
+              <div class="header__btn">&nbsp;</div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <section class="screen">
+        <input type="text" class="screen__input" />
+      </section>
+      <section class="keypad">
+        <div class="keypad__key">7</div>
+        <div class="keypad__key">8</div>
+        <div class="keypad__key">9</div>
+        <div class="keypad__key keypad__key-del">Del</div>
+        <div class="keypad__key">4</div>
+        <div class="keypad__key">5</div>
+        <div class="keypad__key">6</div>
+        <div class="keypad__key keypad__key-operator" data-add="add">+</div>
+        <div class="keypad__key">1</div>
+        <div class="keypad__key">2</div>
+        <div class="keypad__key">3</div>
+        <div class="keypad__key keypad__key-operator" data-subtract="subtract">
+          -
+        </div>
+        <div class="keypad__key keypad__key-dot">.</div>
+        <div class="keypad__key">0</div>
+        <div class="keypad__key keypad__key-operator" data-divide="divide">
+          /
+        </div>
+        <div class="keypad__key keypad__key-operator" data-multiply="multiply">
+          x
+        </div>
+        <div class="keypad__key keypad__key-reset keypad-1__key-reset">
+          Reset
+        </div>
+        <div class="keypad__key keypad__key-equal" data-equal="">=</div>
+      </section>
+    </div>
+  </body>
+</html>
